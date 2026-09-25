@@ -1,5 +1,5 @@
 services:
-  # Express Backend Web Service
+  # Express Backend Web Service (Free Tier)
   - type: web
     name: medmatrix-backend
     env: node
@@ -15,11 +15,10 @@ services:
       - key: CLIENT_URL
         sync: false
 
-  # React Frontend Static Site
+  # React Frontend Static Site (Always Free)
   - type: web
     name: medmatrix-frontend
     env: static
-    plan: free
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     routes:
