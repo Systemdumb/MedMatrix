@@ -3,6 +3,7 @@ services:
   - type: web
     name: medmatrix-backend
     env: node
+    plan: free
     rootDir: server
     buildCommand: npm install && npm run build
     startCommand: npm run start
@@ -18,6 +19,7 @@ services:
   - type: web
     name: medmatrix-frontend
     env: static
+    plan: free
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     routes:
